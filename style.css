@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto&family=Source+Code+Pro:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: url(https://i.pinimg.com/originals/21/7d/a2/217da299cc918fad9b76eb99e4bb75b3.gif);
+    background-size: auto, 100vh;
+    font-family: Source Code Pro;
+    height: 100vh;
+}
+
+
+body::before {
+    background-image: url(https://i.pinimg.com/originals/21/7d/a2/217da299cc918fad9b76eb99e4bb75b3.gif);
+    content: "";
+    position: fixed;
+    inset: 0;
+    filter: blur(5px);
+    z-index: -1;
+}
+
+header {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.menu{
+    background-color: #040D12;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    z-index: 100;
+}
+
+
+.menu ul {
+    display:flex;
+    list-style: none;
+    justify-content: space-around;
+}
+
+.menu a {
+    display: block;
+    padding: 10px;
+}
+
+.menu a:hover{
+    background-image:radial-gradient(circle, #93B1A6, #040D12);
+    transition: 0.5s ease;
+    color: #040D12;
+    padding-left: 4em;
+    padding-right: 4em;
+}
+
+a {
+    text-decoration: none;
+    color: #93B1A6;
+}
+
+a:hover {
+    color: #93B1A6;
+}
+
+
+.textos .title, .subtitle{
+    animation: digitar 3s steps(19, end) 1 forwards;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    width: 0;
+    vertical-align: bottom;
+    color: #93B1A6;
+    padding-bottom: 1em;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+}
+
+@media (max-width: 560px) {
+    .textos .title, .subtitle {
+        font-size: 0.8em;
+    }
+}
+
+@keyframes digitar {
+    100% {
+        width: 100%;
+    }
+}
+
+#sobre,
+#contato,
+#portifolio {
+    color: #93B1A6;
+    font-family: 'Press Start 2P', cursive;
+    min-height: 50vh;
+}
+
+#sobre img {
+    animation: flutuar 2s ease-in-out infinite;
+    height: 240px;
+    width: 180px;
+    clip-path: circle();
+    float: right;
+    margin: 1em;
+    position: relative;
+}
+
+@keyframes flutuar {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+#sobre p {
+    margin: 1.5em;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 1em;
+}
+
+
+#contato h2,
+#sobre h2,
+#portifolio h2 {
+    margin-bottom: 1.3em;
+    padding-top: 4em;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+#portifolio .grid {
+    display: grid;
+    gap: 2em;
+}
+
+@media (min-width: 560px) {
+    #portifolio .grid {
+        grid-template-columns: repeat(2,240px);
+        justify-content: space-around;
+
+    }
+}
+
+@media (min-width: 880px) {
+    #portifolio .grid {
+        grid-template-columns: repeat(3,280px);
+        justify-content: space-around;
+    }
+}
+
+#portifolio figure {
+    text-align: center;
+}
+
+#portifolio figcaption {
+    margin-top:1em ;
+}
+
+.img-portfolio {
+    animation: flutuar 2s ease-in-out infinite;
+    height: 240px;  
+    width: 240px;
+    object-fit: cover;
+    object-position: center bottom;
+    border-radius: 50%;
+    filter: blur(5px);
+}
+
+.img-portfolio:hover {
+    filter: blur(0px);
+    transition: 0.6s ease;
+}
+
+#contato .icons{
+    text-align: center;
+    font-size: 4em;
+}
+
+#contato a:hover {
+    text-shadow: 0px 0px 40px #93B1A6;
+    transition: 0.3s ease;
+}
+
+@media (max-width: 560px) {
+    #contato h2,
+    #sobre h2,
+    #portifolio h2 {
+        font-size: 1em;
+    }
+
+    #sobre img {
+        height: 120px;
+        width: 90px;
+        float: left;
+    }
+
+    .img-portfolio {
+        height: 10em;
+        width: 10em;
+    }
+
+}
