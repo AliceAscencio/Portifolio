@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto&family=Source+Code+Pro:wght@500&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Croissant+One&family=Open+Sans&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -11,21 +11,24 @@ html {
 }
 
 body {
-    background-image: url(https://i.pinimg.com/originals/21/7d/a2/217da299cc918fad9b76eb99e4bb75b3.gif);
-    background-size: auto, 100vh;
+    background-image: url(img/Brown\ Aesthetic\ Note\ Paper\ A4\ Document.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     font-family: Source Code Pro;
     height: 100vh;
 }
 
 
 body::before {
-    background-image: url(https://i.pinimg.com/originals/21/7d/a2/217da299cc918fad9b76eb99e4bb75b3.gif);
+    background-image: url(img/Brown\ Aesthetic\ Note\ Paper\ A4\ Document.png);
     content: "";
     position: fixed;
     inset: 0;
     filter: blur(5px);
     z-index: -1;
 }
+
 
 header {
     height: 100vh;
@@ -36,40 +39,40 @@ header {
 }
 
 .menu{
-    background-color: #040D12;
+    background-color: #CEAD8E;
     position: fixed;
     width: 100vw;
     top: 0;
     z-index: 100;
 }
 
-
 .menu ul {
     display:flex;
     list-style: none;
     justify-content: space-around;
 }
-
+    
 .menu a {
     display: block;
     padding: 10px;
+    color: #EEE3CB;
 }
 
 .menu a:hover{
-    background-image:radial-gradient(circle, #93B1A6, #040D12);
+    background-image:radial-gradient(circle, #967E76, #CEAD8E);
     transition: 0.5s ease;
-    color: #040D12;
+    color: #EEE3CB;
     padding-left: 4em;
     padding-right: 4em;
-}
+}  
 
 a {
     text-decoration: none;
-    color: #93B1A6;
+    color: #967E76;
 }
 
 a:hover {
-    color: #93B1A6;
+    color: #967E76;
 }
 
 
@@ -80,15 +83,15 @@ a:hover {
     margin: 0 auto;
     width: 0;
     vertical-align: bottom;
-    color: #93B1A6;
+    color: #967E76;
     padding-bottom: 1em;
     text-align: center;
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'Croissant One', cursive;
 }
 
 @media (max-width: 560px) {
     .textos .title, .subtitle {
-        font-size: 0.8em;
+        font-size: 1.6em;
     }
 }
 
@@ -101,19 +104,16 @@ a:hover {
 #sobre,
 #contato,
 #portifolio {
-    color: #93B1A6;
-    font-family: 'Press Start 2P', cursive;
+    color: #967E76;
+    font-family: 'Croissant One', cursive;
     min-height: 50vh;
 }
 
 #sobre img {
     animation: flutuar 2s ease-in-out infinite;
-    height: 240px;
-    width: 180px;
     clip-path: circle();
     float: right;
     margin: 1em;
-    position: relative;
 }
 
 @keyframes flutuar {
@@ -131,8 +131,9 @@ a:hover {
 
 #sobre p {
     margin: 1.5em;
-    font-family: 'Source Code Pro', monospace;
+    font-family: 'Open Sans', sans-serif;
     font-size: 1em;
+    font-weight: bold;
 }
 
 
@@ -170,7 +171,8 @@ a:hover {
 }
 
 #portifolio figcaption {
-    margin-top:1em ;
+    margin-top:1em;
+    animation: flutuar 2s ease-in-out infinite;
 }
 
 .img-portfolio {
@@ -181,6 +183,7 @@ a:hover {
     object-position: center bottom;
     border-radius: 50%;
     filter: blur(5px);
+    box-shadow: 1px 5px 1px #CEAD8E;
 }
 
 .img-portfolio:hover {
@@ -194,7 +197,7 @@ a:hover {
 }
 
 #contato a:hover {
-    text-shadow: 0px 0px 40px #93B1A6;
+    text-shadow: 0px 0px 40px #967E76;
     transition: 0.3s ease;
 }
 
@@ -202,12 +205,10 @@ a:hover {
     #contato h2,
     #sobre h2,
     #portifolio h2 {
-        font-size: 1em;
+        font-size: 2em;
     }
 
     #sobre img {
-        height: 120px;
-        width: 90px;
         float: left;
     }
 
